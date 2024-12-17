@@ -1,11 +1,11 @@
 /* See LICENSE file for copyright and license details. */
-
+#include "colors.h"
 /*
  * appearance
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "Liberation Mono:pixelsize=15:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -108,32 +108,32 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	dark0,          //"black",
+	neutral_red,    //"red3",
+	neutral_green,  //"green3",
+	neutral_yellow, //"yellow3",
+	neutral_blue,   //"blue2",
+	neutral_purple, //"magenta3",
+	neutral_aqua,   //"cyan3",
+	light4,         //"gray90",
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	gray_245,       //"gray50",
+	bright_red,     //"red",
+	bright_green,   //"green",
+	bright_yellow,  //"yellow",
+	bright_blue,    //"#5c5cff",
+	bright_purple,  //"magenta",
+	bright_aqua,    //"cyan",
+	light1,         //"white",
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"gray90", /* default foreground colour */
-	"black", /* default background colour */
+	light0_soft,  //"#cccccc",
+	dark0_soft,   //"#555555",
+	light0_hard,  //"gray90", /* default foreground colour */
+	dark0_hard,   //"black", /* default background colour */
 };
 
 
